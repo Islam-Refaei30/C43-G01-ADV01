@@ -44,6 +44,24 @@
 			#endregion
 
 			#endregion
+
+			#region Part 02 Search Example
+			//int[] Numbers = { 15, 20, 5, 656, 65, 84, 5, 0 };
+			//int Position = Helper.SearchArray(Numbers, 50);
+			//Console.WriteLine($"Position of value {Position}");
+			//-----------------------------------------------------//
+			Employee employee01 = new Employee(20,"Islam",25000);
+			Employee employee02 = new Employee(10,"Ziad",2000);
+			Employee employee03 = new Employee(30,"Yousef",10000);
+
+			Employee[] employees =
+			{
+				employee01,employee02,employee03
+			};
+
+			int Position = Helper<Employee>.SearchArray(employees, employee01);
+			Console.WriteLine(Position);
+			#endregion
 		}
 	}
 }
