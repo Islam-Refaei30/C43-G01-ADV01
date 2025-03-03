@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Demo
 {
-	internal class Helper<T> where T:IComparable
+	internal class Helper<T> where T:IComparable<T>
 	{
 		#region SWAP Method
 		#region Befor Genenrics
@@ -41,7 +41,7 @@ namespace Demo
 		#endregion
 
 		#region After Generics
-		public static void SWAP<T>(ref T x, ref T y)
+		public static void SWAP(ref T x, ref T y)
 		{
 			T temp = x;
 			x = y;
@@ -92,7 +92,7 @@ namespace Demo
 					{
 						//if (Array[j] > Array[j+1])
 						if (Array[j].CompareTo(Array[j+1]) == 1)
-							Helper<int>.SWAP(ref Array[j], ref Array[j+1]);
+							Helper<T>.SWAP(ref Array[j], ref Array[j+1]);
 					}
 				}
 			}

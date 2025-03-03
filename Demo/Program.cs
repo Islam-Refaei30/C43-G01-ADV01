@@ -90,18 +90,32 @@
 				Console.WriteLine(Name);
 			}
 
-			Employee employee01 = new Employee(20, "Islam", 25000);
-			Employee employee02 = new Employee(10, "Ziad", 2000);
-			Employee employee03 = new Employee(30, "Yousef", 10000);
+			//Employee employee01 = new Employee(20, "Islam", 25000);
+			//Employee employee02 = new Employee(10, "Ziad", 2000);
+			//Employee employee03 = new Employee(30, "Yousef", 10000);
 
-			Employee[] employees =
+			//Employee[] employees =
+			//{
+			//	employee01,employee02,employee03
+			//};
+			//Helper<Employee>.BubbleSort(employees);
+			//foreach (Employee item in employees)
+			//{
+			//	Console.WriteLine(item);
+			//}
+			#endregion
+
+			#region Part 05 IComparable Vs IComparable Generic
+			Point[] points =
 			{
-				employee01,employee02,employee03
+				new Point(3,5),
+				new Point(30,50),
+				new Point(35,53)
 			};
-			Helper<Employee>.BubbleSort(employees);
-			foreach (Employee item in employees)
+			Helper<Point>.BubbleSort(points);
+			foreach (Point point in points)
 			{
-				Console.WriteLine(item);
+				Console.WriteLine(point);
 			}
 			#endregion
 		}

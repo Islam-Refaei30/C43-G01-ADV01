@@ -47,10 +47,10 @@ namespace Demo
 		{
 			Employee? other = (Employee?)obj; // Explicit casting Unsafe Casting
 
-			if (this.Salary > other.Salary) // compare to object based on salary
+			if (this.Salary > other?.Salary) // compare to object based on salary
 				return 1;
 
-			else if (this.Salary < other.Salary)
+			else if (this.Salary < other?.Salary)
 				return -1;
 
 			else return 0;
