@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Demo
 {
-	internal class Helper<T>
+	internal class Helper<T> where T:IComparable
 	{
 		#region SWAP Method
 		#region Befor Genenrics
@@ -78,6 +78,24 @@ namespace Demo
 				}
 			}
 			return -1;
+		}
+		#endregion
+
+		#region Bubble Sort
+		public static void BubbleSort(T[] Array)
+		{
+			if( Array is not null )
+			{
+				for(int i = 0;i < Array.Length;i++)
+				{
+					for(int j = 0; j<Array.Length -i-1; j++)
+					{
+						//if (Array[j] > Array[j+1])
+						if (Array[j].CompareTo(Array[j+1]) == 1)
+							Helper<int>.SWAP(ref Array[j], ref Array[j+1]);
+					}
+				}
+			}
 		}
 		#endregion
 

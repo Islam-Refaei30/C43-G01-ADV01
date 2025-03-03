@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Demo
 {
-	internal class Employee
+	internal class Employee : IComparable
 	{
 		public int ID { get; set; }
 		public string Name { get; set; }
@@ -41,6 +41,20 @@ namespace Demo
 			//return HashValue;
 
 			//return this.ID.GetHashCode() ^ this.Name?.GetHashCode() ?? default(int) ^ this.Salary.GetHashCode();
+		}
+
+		public int CompareTo(object? obj)
+		{
+			Employee? other = (Employee?)obj; // Explicit casting Unsafe Casting
+
+			if (this.Salary > other.Salary) // compare to object based on salary
+				return 1;
+
+			else if (this.Salary < other.Salary)
+				return -1;
+
+			else return 0;
+			
 		}
 	}
 }
