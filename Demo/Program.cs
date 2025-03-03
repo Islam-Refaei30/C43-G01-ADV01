@@ -50,17 +50,29 @@
 			//int Position = Helper.SearchArray(Numbers, 50);
 			//Console.WriteLine($"Position of value {Position}");
 			//-----------------------------------------------------//
-			Employee employee01 = new Employee(20,"Islam",25000);
-			Employee employee02 = new Employee(10,"Ziad",2000);
-			Employee employee03 = new Employee(30,"Yousef",10000);
+			//Employee employee01 = new Employee(20,"Islam",25000);
+			//Employee employee02 = new Employee(10,"Ziad",2000);
+			//Employee employee03 = new Employee(30,"Yousef",10000);
 
-			Employee[] employees =
-			{
-				employee01,employee02,employee03
-			};
+			//Employee[] employees =
+			//{
+			//	employee01,employee02,employee03
+			//};
 
-			int Position = Helper<Employee>.SearchArray(employees, employee01);
-			Console.WriteLine(Position);
+			//int Position = Helper<Employee>.SearchArray(employees, employee01);
+			//Console.WriteLine(Position);
+			#endregion
+
+			#region Part 03 Value Base Vs Reference Base and GetHashCode
+			Employee emp01 = new Employee(10, "islam", 20000);
+			Employee emp02 = new Employee(10, "islam", 20000);
+			Console.WriteLine($"emp01.GetHashCode() {emp01.GetHashCode()}");
+			Console.WriteLine($"emp02.GetHashCode() {emp02.GetHashCode()}");
+			//if (emp01 == emp02)
+			if (emp01.Equals(emp02))
+				Console.WriteLine("Emp01 Equal Emp02");
+			else
+				Console.WriteLine("Emp01 !Equal Emp02");
 			#endregion
 		}
 	}
