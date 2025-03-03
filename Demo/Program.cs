@@ -116,6 +116,7 @@
 			foreach (Point point in points)
 			{
 				Console.WriteLine(point);
+
 			}
 			#endregion
 		}
