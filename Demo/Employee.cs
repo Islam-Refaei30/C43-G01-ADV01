@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Demo
 {
-	internal class Employee : IComparable
+	internal class Employee : IComparable<Employee>
 	{
 		public int ID { get; set; }
 		public string Name { get; set; }
@@ -55,6 +55,18 @@ namespace Demo
 
 			else return 0;
 			
+		}
+
+		public int CompareTo(Employee? other)
+		{
+
+			if (this.Salary > other?.Salary) // compare to object based on salary
+				return 1;
+
+			else if (this.Salary < other?.Salary)
+				return -1;
+
+			else return 0;
 		}
 	}
 }

@@ -76,33 +76,37 @@
 			#endregion
 
 			#region Part 04 Bubble Sort
-			int[] Numbers = { 5, 2, 3, 4, 66, -6, 0, 1 };
-			Helper<int>.BubbleSort(Numbers);
-			foreach (int number in Numbers)
-			{
-				Console.WriteLine(number);
-			}
+			//int[] Numbers = { 5, 2, 3, 4, 66, -6, 0, 1 };
+			//Helper<int>.BubbleSort(Numbers);
+			//foreach (int number in Numbers)
+			//{
+			//	Console.WriteLine(number);
+			//}
 
-			string[] Names = { "Ziad", "Islam", "Refaei", "Yousef" };
-			Helper<string>.BubbleSort(Names);
-			foreach (string Name in Names)
-			{
-				Console.WriteLine(Name);
-			}
+			//string[] Names = { "Ziad", "Islam", "Refaei", "Yousef" };
+			//Helper<string>.BubbleSort(Names);
+			//foreach (string Name in Names)
+			//{
+			//	Console.WriteLine(Name);
+			//}
 
+			Employee employee01 = new Employee(20, "Islam", 25000);
+			Employee employee02 = new Employee(10, "Ziad", 2000);
+			Employee employee03 = new Employee(30, "Yousef", 10000);
 			//Employee employee01 = new Employee(20, "Islam", 25000);
 			//Employee employee02 = new Employee(10, "Ziad", 2000);
 			//Employee employee03 = new Employee(30, "Yousef", 10000);
 
 			//Employee[] employees =
-			//{
-			//	employee01,employee02,employee03
-			//};
-			//Helper<Employee>.BubbleSort(employees);
-			//foreach (Employee item in employees)
-			//{
-			//	Console.WriteLine(item);
-			//}
+			Employee[] employees =
+			{
+				employee01,employee02,employee03
+			};
+			Helper<Employee>.BubbleSort(employees);
+			foreach (Employee item in employees)
+			{
+				Console.WriteLine(item);
+			}
 			#endregion
 
 			#region Part 05 IComparable Vs IComparable Generic
@@ -112,11 +116,12 @@
 				new Point(30,50),
 				new Point(35,53)
 			};
-			Helper<Point>.BubbleSort(points);
+			Helper<Employee>.BubbleSort(employees);
+			foreach (Employee item in employees)
+				Helper<Point>.BubbleSort(points);
 			foreach (Point point in points)
 			{
 				Console.WriteLine(point);
-
 			}
 			#endregion
 		}
